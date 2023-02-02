@@ -20,10 +20,10 @@ class AsteriskLogger implements Logger {
 	@Override
 	public void error(StringBuilder str) {
 		// TODO Auto-generated method stub
-		StringBuilder newStr = new StringBuilder();
+		StringBuilder newStr = new StringBuilder(str);
 		StringBuilder astLine = new StringBuilder();
 		
-		newStr.append("***Error: " + str + "***");
+		newStr = astrickWord(newStr.insert(0, "ERROR: "));
 		astLine.append(astrickLine(newStr));
 		
 		System.out.println(astLine + "\n" + newStr + "\n" + astLine);
